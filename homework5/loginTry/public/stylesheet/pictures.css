@@ -1,0 +1,101 @@
+body {
+    background-image: url(../image/background.jpg);
+    background-repeat:no-repeat;
+    background-position: center 0;
+    background-attachment:fixed;
+    background-size: 100% 100%;
+}
+
+div.left{
+    margin-left:3%;
+    float: left;
+}
+
+/*由于image浮动，所以对容器也浮动*/
+div.images{
+    float: left;
+}
+
+div.container{
+    width:100%;
+    float:left;
+}
+
+div.img {
+    margin:10px;
+    border:1px solid #bebebe;
+    float:left;
+    text-align:center;
+}
+div.img a{
+    margin:0;
+}
+div.img img {
+    width:100%;
+    height:70%;
+    border:1px solid #bebebe;
+}
+div.img a:hover img {
+    border:1px solid #333333;
+}
+div.desc {
+    text-align:center;
+    font-weight:normal;
+    width:100%;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size:1em;
+    margin:0;
+}
+
+/*分割线样式*/
+.spacer {
+    margin:3% 0;
+    width: 100%;
+    position: relative;
+}
+.spacer .mask {
+    overflow: hidden;
+    height: 20px;
+}
+.spacer .mask:after {
+    content: '';
+    display: block;
+    margin: -25px auto 0;
+    width: 100%;
+    height: 25px;
+    border-radius: 125px/12px;
+    box-shadow: 0 0 20px black;
+}
+
+div.note{
+    position:fixed;
+    margin-left:60%;
+    margin-top:5%;
+    width:35%;
+}
+.note h2 {
+    text-indent: 2em;
+    line-height:200%;
+    font-family: 'Great Vibes', cursive;
+    font-size:2em;
+    color: black;
+    text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+}
+
+/*响应式*/
+@media screen and (min-width: 1201px) {
+    .note{display: block}
+    .left{width: 50%}
+}
+@media screen and (max-width: 1200px) {
+    .note{display: none}
+    .left{width: 90%}
+}
+@media screen and (min-width: 426px) {
+    .img{width:200px;height:180px}
+}
+@media screen and (max-width: 425px) {
+    .img{width:40%;height:120px}
+}
+
+

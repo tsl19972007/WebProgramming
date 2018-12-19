@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%=title %></title>
+    <link href="/stylesheet/tag.css" rel="stylesheet">
+    <link href="/stylesheet/search.css" rel="stylesheet">
+    <script src="/javascript/jquery.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="cover">
+        <h1>Discover what's out there.</h1>
+        <form class="flex-form">
+            <i class="ion-location"></i>
+            <input id="keywords" type="search" placeholder="What picture are you looking for?">
+            <input id="btn_search" type="button" value="search">
+        </form>
+        <div class="inline-radio">
+            <div>
+                <input type="radio" name="member" checked>
+                <label>Picture</label>
+            </div>
+            <div>
+                <input type="radio" name="member">
+                <label>ImageBox</label>
+            </div>
+        </div>
+        <div class="tag-panel">
+            <ul id="list_hot" class="tags-list">
+                <li class="message">Hot Tags:</li>
+                <li class="tag active"><a href="/label_picture?label=自然">自然</a></li>
+                <li class="tag active"><a href="/label_picture?label=自然">动物</a></li>
+                <li class="tag active"><a href="/label_picture?label=自然">植物</a></li>
+                <li class="tag active"><a href="/label_picture?label=自然">人物</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    document.getElementById('btn_search').onclick=function(){
+        var keyWords=document.getElementById("keywords").value;
+        if(keyWords==null||keyWords.length==0) return;
+        var type=getSelectedType();
+        window.location.href='/label_'+type+'?label='+keyWords;
+    };
+    function getSelectedType(){
+        var radios=document.getElementsByName('member');
+        for(var i=0;i<radios.length;i++){
+            if(radios[i].checked){
+                return i==0?"picture":"imageBox";
+            }
+        }
+        return null;
+    }
+    var label=window.location.search;
+    var OL_Action_Root = "http://127.0.0.1:8000/search/getHotTags";
+    $.ajax({
+        url: OL_Action_Root+label,
+        type : 'get',
+        async : false,
+        success : function(data) {
+            var hotTags=data.hotTags;
+            var html_hotTags=" <li class=\"message\">Hot Tags:</li>\n";
+            for(var i=0;i<hotTags.length;i++){
+                html_hotTags+= "<li class=\"tag active\"><a href=\"/label_picture?label="+hotTags[i]+"\">"+hotTags[i]+"</a></li>\n";
+            }
+            document.getElementById("list_hot").innerHTML=html_hotTags;
+        },
+        error:function(e){
+            console.log(e);
+        }
+    });
+</script>
+</html>

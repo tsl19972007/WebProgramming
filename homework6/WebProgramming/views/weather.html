@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href='http://fonts.useso.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+    <script src="../public/javascript/jquery.js"></script>
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            font-size: 150%;
+            text-align: center;
+        }
+        #container {
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+        }
+        button {
+            position: relative;
+            top: -3px;
+            height: 22px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <h1>Weather in <span id="city"></span>, <span id="region"></span></h1>
+    <p>Temp: <span id="temp"></span>
+        <button id="degree">F</button>
+    </p>
+    <p><img id="status-icon" src=/><span id="status-text"></span>
+    </p>
+    <p>Relative humidity: <span id="humidity"></span>
+    </p>
+    <p>Wind gust: <span id="wind-gust"></span>
+        <button id="speed">mph</button>
+    </p>
+</div>
+
+
+</body>
+<script>
+    $(document).ready(function() {
+        var coords;
+        $.get("http://ipinfo.io", function(response) {
+            $('span#city').html(response.city);
+            $('span#region').html(response.region);
+
+
+            $.getJSON('http://api.wunderground.com/api/496dd7824e51737c/conditions/q/' + response.loc + '.json', function(result) {
+                $('span#temp').html(result.current_observation.temp_f);
+                $('button#degree').click(function() {
+                    $(this).text(function(i, text) {
+                        return text === "F" ? "C" : "F";
+                    });
+                    // switch between F and C
+                    if ($('span#temp').text() == result.current_observation.temp_f) {
+                        $('span#temp').html(result.current_observation.temp_c);
+                    } else if ($('span#temp').text() == result.current_observation.temp_c) {
+                        $('span#temp').html(result.current_observation.temp_f);
+                    }
+                });
+                console.log(result.current_observation);
+                $('img#status-icon').attr('src', result.current_observation.icon_url);
+                $('span#status-text').html(result.current_observation.icon);
+                $('span#humidity').html(result.current_observation.relative_humidity);
+                $('span#wind-gust').html(result.current_observation.wind_gust_mph);
+                $('button#speed').click(function() {
+                    $(this).text(function(i, text) {
+                        return text === "mph" ? "kph" : "mph";
+                    });
+                    if ($('span#wind-gust').text() == result.current_observation.wind_gust_mph) {
+                        $('span#wind-gust').html(result.current_observation.wind_gust_kph);
+                    } else if ($('span#wind-gust').text() == result.current_observation.wind_gust_kph) {
+                        $('span#wind-gust').html(result.current_observation.wind_gust_mph);
+                    }
+                });
+                //Below: change background image according to temperature range
+                if (Number(result.current_observation.temp_f) > 90) {
+                    $('body').css('background-image', 'url(http://www.hd2wallpapers.com/wallpapers/hot_desert_sun-1280x800.jpg)');
+                } else if (Number(result.current_observation.temp_f) > 65) {
+                    $("body").css("background-image", "url(http://amagico.com/images/img5/summer-landscape-pictures-hd-desktop-10.jpg)");
+                } else {
+                    $('body').css('background-image', 'url(http://images.summitpost.org/original/713611.JPG)');
+                }
+            });
+        }, "jsonp");
+    });
+</script>
+</html>

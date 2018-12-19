@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>点赞功能</title>
+    <style type="text/css">
+        .like{ font-size:20px;  color:#ccc; cursor:pointer; }
+        .likes{
+            margin:auto 5px;
+            font-size:20px;
+            cursor:auto;
+            color:black
+        }
+        .cs{color:#f00;}
+    </style>
+    <script type="text/javascript" src="../public/javascript/jquery.js"></script>
+</head>
+
+<body>
+<p class="like">&#10084;<span class="likes">0</span></p>
+</body>
+
+<script>
+    $(function () {
+        $(".like").click(function () {
+            $(this).addClass('cs');
+            $("#likes").html(function (index, value) {
+                return ++value;
+            });
+        })
+    })
+</script>
+</html>

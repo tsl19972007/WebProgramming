@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/stylesheet/homepage.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheet/pictures.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheet/tag.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheet/like.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheet/radio.css" />
+    <script src="/javascript/jquery.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="left">
+        <div class="title">
+            <h1 class="headline">
+                Pictures <%=label %>
+            </h1>
+            <div class="inline-radio">
+                <div>
+                    <input type="radio" name="member" value="new"checked>
+                    <label>New</label>
+                </div>
+                <div>
+                    <input type="radio" name="member" value="likes">
+                    <label>Likes</label>
+                </div>
+            </div>
+        </div>
+        <div class="spacer">
+            <div class="mask"></div>
+        </div>
+        <div class="image" id="div_pictures">
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(document).ready(function() {
+        $('input[type=radio]').change(function() {
+            if(this.value=="likes"){
+                var label=window.location.search.substr(1).split("&")[0]+"&searchBy=likes";
+                var OL_Action_Root = "http://127.0.0.1:8000/label_picture/showPictures?";
+                $.ajax({
+                    url: OL_Action_Root+label,
+                    type : 'get',
+                    async : false,
+                    success : function(data) {
+                        console.log(data);
+                        document.getElementById('div_pictures').innerHTML=data.html_pictures;
+                    },
+                    error:function(e){
+                        console.log(e);
+                    }
+                });
+            }else{
+                var label=window.location.search.substr(1).split("&")+"&searchBy=new";
+                var OL_Action_Root = "http://127.0.0.1:8000/label_picture/showPictures?";
+                $.ajax({
+                    url: OL_Action_Root+label,
+                    type : 'get',
+                    async : false,
+                    success : function(data) {
+                        console.log(data);
+                        document.getElementById('div_pictures').innerHTML=data.html_pictures;
+                    },
+                    error:function(e){
+                        console.log(e);
+                    }
+                });
+            }
+        });
+
+        var label=window.location.search;
+        var OL_Action_Root = "http://127.0.0.1:8000/label_picture/showPictures";
+        $.ajax({
+            url: OL_Action_Root+label,
+            type : 'get',
+            async : false,
+            success : function(data) {
+                console.log(data);
+                document.getElementById('div_pictures').innerHTML=data.html_pictures;
+            },
+            error:function(e){
+                console.log(e);
+            }
+        });
+    });
+</script>
+<script src="/javascript/like.js"></script>
+</html>

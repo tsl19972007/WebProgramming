@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0, maximum-scale=1",user-scalable=no>
+    <title><%=title %>></title>
+    <link rel="stylesheet" href="/stylesheet/upload_s.css">
+    <script type="text/javascript" src="/javascript/jquery.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
+    <script type="text/javascript" src="/javascript/upload_s.js"></script>
+    <link href="/stylesheet/tag.css" rel="stylesheet">
+    <style>
+        .message{
+            margin-right: 1em;
+            margin-bottom: 0.6em;
+            padding: 0.2rem 0.6rem;
+            list-style-type: none;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 0.7rem;
+            line-height: 0.6rem;
+            color: black;
+        }
+        .tag-panel{
+            border:1px solid #bebebe;
+            width:280px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="left">
+        <div class="title">
+            <h1 class="headline">
+                Create Your ImageBox
+            </h1>
+        </div>
+        <div class="spacer">
+            <div class="mask"></div>
+        </div>
+        <div style="margin:30px 0">
+            <label>标题(24张)：</label>
+            <textarea id="title" rows="1" cols="30"></textarea>
+        </div>
+        <div class="panel-rightTop">
+            <div class="container">
+                <label>图片</label>
+                <button class="btn btn-success" id="add1">添加图片</button>
+                <button class="btn btn-success butt1" id="select1" style="display:none">清空图片</button>
+                <input type="file" id="file_input1" multiple/>
+            </div>
+        </div>
+        <div style="margin:300px 0;padding:80px 0;">
+            <div class="tag-panel">
+                <ul class="tags-list">
+                    <li class="message">点击标签以选中：</li>
+                    <li class="tag">自然</li>
+                    <li class="tag">动物</li>
+                    <li class="tag">植物</li>
+                    <li class="tag">人物</li>
+                    <li class="tag">建筑</li>
+                    <li class="tag">影视</li>
+                    <li class="tag">艺术</li>
+                    <li class="tag">时尚</li>
+                    <li class="tag">卡通</li>
+                    <li class="tag">科技</li>
+                    <li class="tag">体育</li>
+                    <li class="tag">文化</li>
+                    <li class="tag">生活</li>
+                </ul>
+                <input id="tag-input">
+                <button id="tag-submit">添加自定义标签</button>
+            </div>
+            <div style="padding:30px 0;">
+                <button class="btn btn-success" id="btn_upload">上传</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tagList = document.querySelector('.tags-list');
+    tagList.addEventListener("click", toggleActive, false);
+    var tl = new TimelineMax();
+    var w = null;
+
+    document.getElementById('tag-submit').onclick=function(){
+        var tagName=document.getElementById('tag-input').value;
+        if(tagName=="") return;
+        document.getElementsByClassName('tags-list')[0].innerHTML+="<li class=\"tag\">"+tagName+"</li>";
+    };
+    document.getElementById('get-tag').onclick=function(){
+        getSelectedTags();
+    };
+    function toggleActive(e) {
+        if(e.target.className=="message"){return;}
+        if (e.target.classList.contains('tags-list')) return;
+
+        w = e.target.clientWidth;
+
+        tl.to(e.target, 0.15, {
+            color: "rgba(255, 255, 255, 0)"
+        })
+            .to(e.target, 0.2, {
+                scaleX: 0,
+                ease: Power2.easeIn
+            })
+            .to(e.target, 0.2, {
+                width: 0,
+                ease: Power2.easeIn,
+                onComplete: function() {
+                    e.target.classList.toggle('active');
+                }
+            })
+            .to(e.target, 0.2, {
+                width: w,
+                ease: Power2.easeOut,
+                onComplete: function() {
+                    e.target.style = '';
+                }
+            })
+            .to(e.target, 0.2, {
+                scaleX: 1,
+                ease: Power3.easeOut
+            })
+            .to(e.target, 0.15, {
+                color: "rgba(255, 255, 255, 0.9)",
+                onComplete: function() {
+                    e.target.style = '';
+                }
+            });
+
+    }
+    function getSelectedTags(){
+        var tagList = document.getElementsByClassName("tag active");
+        var tagNames=[];
+        for(var i=0;i<tagList.length;i++){
+            tagNames.push(tagList[i].innerHTML);
+        }
+        return tagNames;
+    }
+</script>
+</body>
+</html>

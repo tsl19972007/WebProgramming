@@ -1,0 +1,1592 @@
+html,body{height:100%;width:100%}
+html,
+body,
+button,
+input,
+select,
+.slogan span{
+
+}
+textarea{
+    font-family:					Microsoft Yahei;
+    -webkit-font-smoothing:			antialiased;
+}
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+a,
+img,
+button,
+input,
+select,
+textarea{
+    outline:						0;
+}
+
+p,
+ul,
+ul li,
+dl,
+dl dt,
+dl dd{
+    margin:							0;
+    padding:						0;
+}
+
+ul{
+    list-style-type:				none;
+}
+
+img{
+    border:							0;
+}
+
+label{
+    cursor:							pointer;
+}
+
+body{
+    width:							100%;
+    min-width: 276px;
+    padding:						0;
+    margin:							0;
+    font-weight:					normal;
+    line-height:					1.0;
+    color:							#454545;
+}
+
+a.green_cross{
+    display:						inline-block;
+    width:							24px;
+    height:							24px;
+    background-image:				url("http://techbrood.com/themes/techbrood/css/../image/green_cross.png");
+    background-repeat:				no-repeat;
+    background-position:			center;
+}
+
+#header{
+    width:							100%;
+    min-height: 30px;
+    height:							30px	!important;
+    _height:						30px;
+    background: url("http://techbrood.com/themes/techbrood/image/h_bg.png");
+    background-color:				rgba(37, 39, 44, 0.941176);
+    background-color:				rgb(37, 39, 44)\0; /*ie8 hack*/
+    border:							0;
+}
+
+#header div.logo{
+    float:							left;
+    overflow:						hidden;
+    height: 30px;
+    margin-right: 15px;
+}
+
+#header div.logo a{
+    height:							30px;
+    display:						inline-block;
+    overflow:						hidden;
+}
+#header div.slogan{
+    float: left;
+    color: #ccc;
+    font: 13px/30px 'Microsoft Yahei';
+    font-weight:					bold;
+    margin: 2px 0 0;
+    height: 30px;
+    overflow:						hidden;
+    letter-spacing: 1px;
+}
+#header:hover{
+    /*background-color:				#50a456;*/
+}
+
+#header div.userzone{
+    height: 30px;
+    float: right;
+    overflow: hidden;
+    padding: 0 15px;
+}
+
+#header div.userzone a{
+    display:						inline-block;
+    float:							left;
+    font:							12px/30px '微软雅黑', '黑体';
+    color:							whitesmoke;
+    text-decoration:				none;
+}
+
+#header div.userzone a:hover{
+    color:							#fefefe
+}
+
+#header div.userzone div.divideline{
+    float:							left;
+    width:							1px;
+    height:							25px;
+    background-color:				whitesmoke;
+    margin:							10px 10px 0 10px;
+    text-align:						center;
+}
+
+#header div.userzone #LINKS_DIV{
+    overflow:						hidden;
+}
+
+#header #LOGIN_USERZONE{
+    overflow:						hidden;
+}
+
+#header #LOGIN_USERZONE #HEAD_IMAGE{
+    float:							left;
+    margin-right:					5px;
+    text-align:						right;
+    cursor:							pointer;
+    overflow:						hidden;
+}
+
+#header #LOGIN_USERZONE #HEAD_IMAGE span{
+    float:							left;
+    display:						inline-block;
+    margin-left:                  10px;
+    margin-right:					10px;
+    overflow:						hidden;
+    font:							12px/30px 'Microsoft Yahei';
+    color:							#ffffff;
+}
+#header #LOGIN_USERZONE #HEAD_IMAGE i{
+    margin:0 10px;
+}
+#header #LOGIN_USERZONE #HEAD_IMAGE img{
+    float: left;
+    margin-top: 2px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+#header #HEAD_IMAGE i.fa-bell::before{
+    color: rgba(236, 117, 11, 0.88);
+}
+.DROPDOWN_ARROW {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    margin-left: 5px;
+    border: 4px solid;
+    vertical-align: middle;
+    border-color: rgba(67, 72, 81, 0.0);
+    border-top-color: white;
+}
+
+.DROPDOWN_ARROW:focus,.DROPDOWN_ARROW:hover{
+    border-top-color: rgb(169, 169, 169);
+}
+
+#header #LOGIN_USERZONE #DROPDOWN_MENU,
+#header #USER_ZONE_DIV #MOBILE_DROPDOWN_MENU{
+    display:						none;
+    position:						absolute;
+    z-index:						2;
+    top:							30px;
+    width:							127px	!important;
+    width:							127px;
+    _width:							127px;
+    overflow:						hidden;
+    padding:						11px 11px 0 11px;
+    border:							1px solid #cccccc;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-color:				#ffffff;
+}
+
+#header #LOGIN_USERZONE #DROPDOWN_MENU{
+    margin-right:               20px;
+    margin-left:					0;
+}
+
+#header #USER_ZONE_DIV #MOBILE_DROPDOWN_MENU{
+    margin-left:					-100px;
+}
+
+#header #LOGIN_USERZONE #DROPDOWN_MENU ul li,
+#header #USER_ZONE_DIV #MOBILE_DROPDOWN_MENU ul li{
+    clear:							left;
+    height:							20px;
+    margin-bottom:					11px;
+    text-align:						left;
+}
+
+#header #LOGIN_USERZONE #DROPDOWN_MENU ul li a,
+#header #USER_ZONE_DIV #MOBILE_DROPDOWN_MENU ul li a{
+    display:						block;
+    height:							17px;
+    line-height:					17px;
+    font-size:						14px;
+    color:							#454545;
+    text-decoration:				none;
+}
+
+#header #LOGIN_USERZONE #DROPDOWN_MENU ul li a img{
+    float:							left;
+    margin-right:					15px;
+}
+
+#header #CHAT_ICON{
+    font-size:						1.03em;
+    color:							rgb(252,145,104);
+    animation:						blink linear infinite 3s;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 0.25;
+    }
+    10% {
+        opacity: 0.4;
+    }
+    20%{
+        opacity: 0.55;
+    }
+    30% {
+        opacity: 0.7;
+    }
+    40% {
+        opacity: 0.9;
+    }
+    50% {
+        opacity: 1.0;
+    }
+    60% {
+        opacity: 0.9;
+    }
+    70%{
+        opacity: 0.7;
+    }
+    80%{
+        opacity: 0.55;
+    }
+    90%{
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 0.25;
+    }
+}
+@keyframes blink {
+    0% {
+        opacity: 0.25;
+    }
+    10% {
+        opacity: 0.4;
+    }
+    20%{
+        opacity: 0.55;
+    }
+    30% {
+        opacity: 0.7;
+    }
+    40% {
+        opacity: 0.9;
+    }
+    50% {
+        opacity: 1.0;
+    }
+    60% {
+        opacity: 0.9;
+    }
+    70%{
+        opacity: 0.7;
+    }
+    80%{
+        opacity: 0.55;
+    }
+    90%{
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 0.25;
+    }
+}
+
+/* menus */
+#menubar{
+    float: left;
+    height: 30px;
+    background: url("http://s.techbrood.com/themes/techbrood/image/h_bg.png");
+    /*background-color: rgba(37, 39, 44, 0.941176);*/
+}
+#cssmenu {
+    position: relative;
+    margin: 0 auto;
+    z-index: 100;
+}
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a{
+    border: 0;
+    list-style: none;
+    line-height: 1;
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#cssmenu > ul i {
+    padding: 0 5px;
+    width: 21px;
+}
+#cssmenu:after,
+#cssmenu > ul:after {
+    content: ".";
+    display: block;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+#cssmenu > ul > li {
+    float: left;
+}
+#cssmenu > ul li.hot:after{
+    content: ".";
+    width: 8px;
+    height: 8px;
+    overflow: hidden;
+    background-color: rgb(252,145,104);
+    border-radius: 4px;
+    position: absolute;
+    display: block;
+    top: 6px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    z-index: 0;
+    border: none;
+    box-shadow: 0 0 0 0 rgba(236, 169, 69, 0.7);
+    border-radius: 100%;
+    cursor: pointer;
+    animation: pulsedb 2.25s infinite cubic-bezier(0.36, 0, 0, 1);
+}
+#cssmenu > ul > li > a {
+    padding: 0 10px;
+    line-height: 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #ddd;
+}
+#cssmenu > ul > li:hover > a,
+#cssmenu ul li.active a {
+    color: #fff;
+}
+#cssmenu > ul > li:hover,
+#cssmenu ul li.active {
+    background: rgba(88, 169, 13, 0.5);
+    -webkit-transition: background 0.3s ease;
+    -ms-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+}
+#cssmenu > ul > li.has-sub > a {
+    padding-right: 20px;
+}
+#cssmenu > ul > li.has-sub > a:after {
+    position: absolute;
+    top: 15px;
+    right: 11px;
+    width: 8px;
+    height: 2px;
+    display: block;
+    background: #ddd;
+    content: '';
+}
+#cssmenu > ul > li.has-sub > a:before {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    display: block;
+    width: 2px;
+    height: 8px;
+    background: #ddd;
+    content: '';
+    -webkit-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+#cssmenu > ul > li.has-sub:hover > a:before {
+    top: 23px;
+    height: 0;
+}
+#cssmenu ul ul {
+    position: absolute;
+    left: -9999px;
+}
+#cssmenu ul ul li {
+    height: 0;
+    -webkit-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+#cssmenu li:hover > ul {
+    left: auto;
+}
+#cssmenu li:hover > ul > li {
+    height: auto;
+}
+#cssmenu ul ul ul {
+    margin-left: 100%;
+    top: 0;
+}
+#cssmenu ul ul li a {
+    border-bottom: 1px solid rgba(150, 150, 150, 0.15);
+    padding: 11px 15px;
+    width: 170px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #ddd;
+    font-weight: 400;
+    background: #333;
+    text-align: left;
+}
+#cssmenu ul ul li:last-child > a,
+#cssmenu ul ul li.last-item > a {
+    border-bottom: 0;
+}
+#cssmenu ul ul li:hover > a,
+#cssmenu ul ul li a:hover {
+    color: #fff;
+}
+#cssmenu ul ul li.has-sub > a:after {
+    position: absolute;
+    top: 16px;
+    right: 11px;
+    width: 8px;
+    height: 2px;
+    display: block;
+    background: #ddd;
+    content: '';
+}
+#cssmenu ul ul li.has-sub > a:before {
+    position: absolute;
+    top: 13px;
+    right: 14px;
+    display: block;
+    width: 2px;
+    height: 8px;
+    background: #ddd;
+    content: '';
+    -webkit-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+#cssmenu ul ul > li.has-sub:hover > a:before {
+    top: 17px;
+    height: 0;
+}
+#cssmenu ul ul li.has-sub > a:hover,
+#cssmenu ul li.has-sub ul li.has-sub ul li > a:hover {
+    background: #363636;
+}
+#cssmenu .more{
+    display: block;
+    text-indent: -9999px;
+    padding-left: 22px;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-image: url("http://techbrood.com/themes/techbrood/css/../image/icon_more.png");
+}
+/* end menu */
+
+.header-account{
+    float: right;
+    background: url("http://s.techbrood.com/themes/techbrood/image/h_bg.png");
+    background-color: rgba(37, 39, 44, 0.941176);
+}
+#content{
+    width:							100%;
+    min-height:						485px;
+    margin-top: 20px;
+    overflow:						hidden;
+}
+
+#footer{
+    width:							100%;
+    overflow:						hidden;
+    padding:						20px 0;
+    background: url("http://techbrood.com/themes/techbrood/image/h_bg.png");
+    background-color:				rgba(42, 45, 51, 1);
+    background-color:               #2a2d33;
+    border:							0;
+    color:							whitesmoke;
+    font-size:						13px;
+    margin:							0;
+    font-family:					Microsoft Yahei;
+}
+
+#footer .context_div #COPYRIGHT{
+    width:							100%;
+    overflow:						hidden;
+}
+
+#footer .context_div #COPYRIGHT{
+    /* margin-top: 10px; */
+    font-size: 13px;
+    color: #ccc;
+    line-height: 21px;
+}
+#footer .context_div #QUICK_LINKS{
+    float: right;
+    line-height: 40px;
+}
+#footer .context_div #QUICK_LINKS li{
+    display: inline-block;
+    margin-left: 5px;
+}
+#footer .context_div #QUICK_LINKS li .split-line {
+    margin-right: 5px;
+    color: #c8c8c8;
+    font-size: 12px;
+}
+#footer .context_div #QUICK_LINKS li a{
+    color: #ccc;
+}
+
+/* pageList */
+#footer ul.pageList li { border-left:whitesmoke 1px solid; float:left; line-height:90%; }
+#footer ul.pageList li.first { border:none; }
+#footer ul.pageList li a { color:whitesmoke; font-weight: normal; display:inline; padding:0px 5px; }
+#footer ul.pageList li.first a { padding-left:0px; }
+
+#footer #COPYRIGHT .COPYRIGHT_LEFT{
+    float:							left;
+    line-height: 40px;
+}
+
+#footer #COPYRIGHT .COPYRIGHT_RIGHT{
+    float:							right;
+}
+#footer #COPYRIGHT .COPYRIGHT_RIGHT img.foot_logo{
+    float: right;
+    width: 40px;
+}
+.context_div{
+    width: 70%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#header .context_div,
+#footer .context_div{width:100%;}
+#footer .context_div dl{
+    float:							left;
+    overflow:						hidden;
+}
+
+#footer .context_div dl dt{
+    float:							left;
+    width:							90px;
+    text-align:						left;
+}
+
+#footer .context_div dl dd{
+    float:							left;
+    overflow:						hidden;
+    text-align:						left;
+    line-height:					19px;
+}
+
+#footer .context_div dl dd a{
+    display:						inline-block;
+    overflow:						hidden;
+    margin-right:					35px;
+    font-size:						12px;
+    line-height:					14px;
+    text-decoration:				none;
+    color:							#666666;
+}
+
+#footer .context_div dl dd a:hover{
+    text-decoration:				underline;
+}
+
+#footer .context_div p{
+    float:							right;
+}
+
+#footer .context_div p .icp{
+    font-size:						12px;
+}
+
+.jqmOverlay{
+    background-color:				#000000;
+}
+
+.jqmWindow{
+    display:						none;
+    position:						absolute;
+    z-index:						9;
+    top:							19%;
+    left:							50%;
+}
+
+.dialog_type01{
+    width:							598px;
+    /*overflow:						hidden;*/
+    margin-left:					-274px;
+}
+
+.dialog_type01 div.dialog_main{
+    float:							left;
+    width:							548px;
+    overflow:						hidden;
+}
+
+
+#DIALOG_CHAT_MESSAGES{
+    position:						fixed;
+    top:							8%;
+    width:							850px;
+    height:							500px;
+    overflow:						hidden;
+    margin-left:					-405px;
+    z-index:						99999;
+}
+
+#DIALOG_CHAT_MESSAGES #CHAT_USER_LIST{
+    float:							left;
+    width:							79px;
+    padding:						15px;
+    height:							500px;
+    overflow-x:						hidden;
+    overflow-y:						auto;
+    background-color:				#EAEAEA;
+    border-right:					1px solid #AAAAAA;
+}
+
+#DIALOG_CHAT_MESSAGES #CHAT_USER_LIST ul{
+    width:							100%;
+    overflow:						hidden;
+}
+
+#DIALOG_CHAT_MESSAGES #CHAT_USER_LIST ul li{
+    width:							100%;
+    overflow:						hidden;
+    clear:							left;
+    margin:							0 0 10px 0;
+    text-align:						center;
+}
+
+#DIALOG_CHAT_MESSAGES #CHAT_USER_LIST ul li a{
+    display:						inline-block;
+    overflow:						hidden;
+}
+
+#DIALOG_CHAT_MESSAGES #CHAT_USER_LIST ul li a img{
+    width:							40px;
+    height:							40px;
+    border-radius:					20px;
+}
+
+#DIALOG_CHAT_MESSAGES #CHAT_USER_LIST ul li a span{
+    display:						inline-block;
+    float:							right;
+    width:							18px;
+    height:							18px;
+    line-height:					18px;
+    border-radius:					9px;
+    background-color:				#555555;
+    font-size:						0.5em;
+    color:							#ffffff;
+    position:						relative;
+    z-index:						100000;
+    margin-top:						-15px;
+}
+
+#DIALOG_CHAT_MESSAGES div.dialog_main{
+    float:							left;
+    width:							720px;
+    height:							500px;
+    overflow:						hidden;
+    border:							10px solid #CCCCCC;
+    background-color:				#FFFFFF;
+}
+
+#DIALOG_CHAT_MESSAGES a.close_button{
+    float:							right;
+    display:						inline-block;
+    width:							50px;
+    height:							50px;
+    margin-top:						25px;
+    background-color:				#000000;
+    background-image:				url("http://techbrood.com/themes/techbrood/css/../image/white_x.png");
+    background-repeat:				no-repeat;
+    background-position:			center;
+}
+
+#DIALOG_CHAT_MESSAGES div.dialog_main div.chat_header,
+#DIALOG_CHAT_MESSAGES div.dialog_main div.chat_window,
+#DIALOG_CHAT_MESSAGES div.dialog_main div.chat_input{
+    width:							100%;
+    overflow:						hidden;
+    padding:						10px;
+}
+
+#DIALOG_CHAT_MESSAGES div.dialog_main div.chat_header{
+    height:							60px;
+    background-color:				#EAEAEA;
+    font-size:						1.5em;
+    font-weight:					nomral;
+    color:							#555555;
+    line-height:					40px;
+}
+
+#DIALOG_CHAT_MESSAGES div.dialog_main div.chat_header img{
+    float:							left;
+    width:							40px;
+    height:							40px;
+    border-radius:					20px;
+    margin-right:					10px;
+}
+
+#DIALOG_CHAT_MESSAGES div.dialog_main div.chat_window{
+    height:							300px;
+    overflow-x:						hidden;
+    overflow-y:						auto;
+}
+
+#DIALOG_CHAT_MESSAGES div.dialog_main div.chat_window ul#CHAT_MESSAGE_LIST{
+    min-height:						500px;
+}
+
+#DIALOG_CHAT_MESSAGES div.dialog_main div.chat_input{
+    height:							120px;
+    background-color:				#EAEAEA;
+}
+
+#DIALOG_CHAT_MESSAGES div.dialog_main div.chat_input textarea{
+    float:							left;
+    width:							570px;
+    height:							100px;
+    resize:							none;
+    padding:						10px;
+}
+
+#DIALOG_CHAT_MESSAGES div.dialog_main div.chat_input a#CHAT_MESSAGE_SEND{
+    float:							right;
+    display:						inline-block;
+    width:							100px;
+    height:							100px;
+    line-height:					100px;
+    background-color:				green;
+    text-align:						center;
+    color:							#FFFFFF;
+}
+
+#DIALOG_CHAT_MESSAGES .chat_message_list_ul{
+    display:						none;
+}
+
+#DIALOG_CHAT_MESSAGES li.message_item{
+    clear:							left;
+    overflow:						hidden;
+    margin:							25px 0;
+}
+
+#DIALOG_CHAT_MESSAGES li.old_message{
+    color:							#cccccc;
+}
+
+#DIALOG_CHAT_MESSAGES li.message_item div{
+    clear:							left;
+    overflow:						hidden;
+    font-size:						12px;
+    font-weight:					normal;
+}
+
+#DIALOG_CHAT_MESSAGES li.message_item div dl,
+#DIALOG_CHAT_MESSAGES li.message_item div dl dt,
+#DIALOG_CHAT_MESSAGES li.message_item div dl dd{
+    overflow:						hidden;
+}
+
+#DIALOG_CHAT_MESSAGES li.message_item div.message_div{
+    width:							50%;
+    overflow:						hidden;
+}
+
+#DIALOG_CHAT_MESSAGES .my_send div.message_div,
+#DIALOG_CHAT_MESSAGES .my_send .message_body dd,
+#DIALOG_CHAT_MESSAGES .my_send .message_body dt.user_head{
+    float:							right;
+}
+
+#DIALOG_CHAT_MESSAGES li.message_item .message_datetime{
+    clear:							right;
+    margin:							0 0 5px 0;
+}
+
+#DIALOG_CHAT_MESSAGES .my_send .message_datetime{
+    text-align:						right;
+}
+
+#DIALOG_CHAT_MESSAGES .message_body dd{
+    max-width:						325px;
+    display:						inline-block;
+    padding:						10px;
+    background-color:				green;
+    border-radius:					5px;
+}
+
+#DIALOG_CHAT_MESSAGES .old_message .message_body dd{
+    background-color:				#d4d4d4;
+}
+
+#DIALOG_CHAT_MESSAGES .my_send .message_body dd span.message_content,
+#DIALOG_CHAT_MESSAGES .friend_send .message_body dd span.message_content{
+    width:							100%;
+    overflow:						hidden;
+    font-size:						13px;
+    color:							#FFFFFF;
+    word-break:						break-all;
+}
+
+#DIALOG_CHAT_MESSAGES .friend_send div.message_div,
+#DIALOG_CHAT_MESSAGES .friend_send .message_body dd,
+#DIALOG_CHAT_MESSAGES .friend_send .message_body dt.user_head{
+    float:							left;
+}
+
+#DIALOG_CHAT_MESSAGES .friend_send .message_datetime{
+    clear:							left;
+    text-align:						left;
+}
+
+#DIALOG_CHAT_MESSAGES li.message_item .user_head{
+    margin:							0 5px;
+}
+
+#DIALOG_CHAT_MESSAGES li.message_item .user_head,
+#DIALOG_CHAT_MESSAGES li.message_item .user_head img{
+    width:							32px;
+    height:							32px;
+    border-radius:					16px;
+}
+
+.dialog_type01 div.dialog_main_border_div{
+    position:						absolute;
+    z-index:						10;
+    width:							548px;
+    height:							100%;
+    top:							0;
+    left:							0;
+    background-color:				#ffffff;
+    -ms-filter:						'progid:DXImageTransform.Microsoft.Alpha(Opacity=20)';
+    filter:							alpha(opacity=20);
+    -moz-opacity:					0.2;
+    -khtml-opacity:					0.2;
+    opacity:						0.2;
+}
+
+.dialog_type01 div.dialog_main_content_div{
+    position:						relative;
+    z-index:						10;
+    width:							408px	!important;
+    width:							538px;
+    _width:							408px;
+    padding:						45px 65px 15px 65px;
+    overflow:						hidden;
+    margin:							5px;
+    background-color:				#fff;
+    box-sizing:                     content-box;
+}
+
+.dialog_type01 div.dialog_main_content_div form ul li{
+    clear:							left;
+    overflow:						hidden;
+    height:							42px;
+    line-height:					42px;
+    margin:							0 0 13px 0;
+}
+
+.dialog_type01 div.dialog_main_content_div form ul li dl dt,
+.dialog_type01 div.dialog_main_content_div form ul li dl dd{
+    float:							left;
+    overflow:						hidden;
+}
+
+.dialog_type01 div.dialog_main_content_div form ul li dl dt{
+    width:							75px;
+    font-size:						14px;
+    text-align:						left;
+}
+
+.dialog_type01 div.dialog_main_content_div form ul li dl dt.center_align{
+    text-align:						center;
+}
+
+.dialog_type01 div.dialog_main_content_div form ul li dl dd{
+    width:							268px;
+}
+
+.dialog_type01 div.dialog_main_content_div form ul li dl dd.borderbox{
+    width:							266px	!important;
+    width:							268px;
+    _width:							266px;
+    height:							40px	!important;
+    height:							42px;
+    _height:						40px;
+    border:							1px solid #cccccc;
+}
+
+.dialog_type01 div.dialog_main_content_div form ul li dl dd.borderbox_focus{
+    border-color:					#43b14d;
+}
+
+.dialog_type01 div.dialog_main_content_div form ul li dl dd.borderbox_error{
+    border-color:					#ff0000;
+}
+
+.dialog_type01 div.dialog_main_content_div form ul li dl dd.msgbox{
+    width:							60px;
+    margin:							3px 0 0 5px;
+}
+
+.dialog_type01 div.dialog_main_content_div form ul li dl dd.msgbox,
+#DIALOG_LOGIN #DIALOG_LOGIN_ERROR_MSG dl dd{
+    font-size:						12px;
+    color:							#ff0000;
+    line-height:					1.50;
+}
+
+.dialog_type01 div.dialog_main_content_div form ul li dl dd input[type=text],
+.dialog_type01 div.dialog_main_content_div form ul li dl dd input[type=password]{
+    width:							236px;
+    height:							38px;
+    line-height:					38px;
+    border:							0;
+    margin:							1px 15px 1px 15px;
+    color:							#454545;
+}
+
+.dialog_type01 div.dialog_main_content_div form ul li dl dd input[type=text]{
+    font-size:						14px;
+}
+
+.dialog_type01 div.dialog_main_content_div form ul li dl dd input[type=password]{
+    font-size:						9px;
+}
+
+.dialog_type01 a.close_button{
+    float:							right;
+    display:						inline-block;
+    width:							50px;
+    height:							50px;
+    margin-top:						25px;
+    background-color:				#000000;
+    background-image:				url("http://techbrood.com/themes/techbrood/css/../image/white_x.png");
+    background-repeat:				no-repeat;
+    background-position:			center;
+}
+
+.dialog_type01 a.submit_button{
+    display:						inline-block;
+    width:							120px;
+    height:							35px	!important;
+    height:							40px;
+    _height:						35px;
+    line-height:					40px;
+    background-color:				#43b14d;
+    border:							0;
+    border-bottom:					5px solid #399643;
+    font-size:						14px;
+    color:							#ffffff;
+    text-align:						center;
+    text-decoration:				none;
+}
+
+.dialog_type01 a.forgot_link,
+.dialog_type01 a.register_link{
+    float:							right;
+    font-size:						12px;
+    color:							#454545;
+    text-decoration:				none;
+}
+
+.dialog_type01 a.forgot_link:hover{
+    text-decoration:				underline;
+}
+
+.dialog_type01 label{
+    font-size:						14px;
+    color:							#888888;
+    margin-left:					10px;
+}
+
+#DIALOG_LOGIN_THIRDPARTY_DIV{
+    clear:							left;
+    overflow:						hidden;
+    margin-top:						23px;
+    padding:						20px 20px 50px 20px;
+    border:							0;
+    border-top:						1px dashed #cccccc;
+    text-align:                                             center;
+}
+
+#DIALOG_LOGIN_THIRDPARTY_DIV p{
+    font-size:						12px;
+    color:							#cccccc;
+    margin-bottom:					25px;
+}
+
+#DIALOG_LOGIN_THIRDPARTY_DIV a{
+    display:						inline-block;
+    overflow:						hidden;
+    margin-right:					25px;
+}
+
+#DIALOG_LOGIN_THIRDPARTY_DIV a.nomargin{
+    margin:							0;
+}
+
+#DIALOG_LOGIN a.register_link{
+    position:						absolute;
+    bottom:							15px;
+    right:							43px;
+}
+
+#DIALOG_LOGIN_ERROR_MSG{
+    display:						none;
+    margin:							0;
+}
+
+div.dialog_main_content_div{
+    width:							448px	!important;
+    width:							538px;
+    _width:							448px;
+    padding:						45px 45px 30px 45px;
+}
+
+ul.yiiPager{
+    text-align:						center;
+    overflow:						hidden;
+    margin:						50px 0 0 70px;
+    padding:						10px 0;
+    background:						transparent;
+}
+
+ul.yiiPager a{
+    display:						inline-block;
+    font-size:						14px;
+    color:							#666666;
+    text-decoration:				none;
+    padding:						4px;
+}
+
+ul.yiiPager li{
+    display:						inline-block;
+    margin:							0;
+}
+
+ul.yiiPager li:hover a,
+ul.yiiPager li.page.selected a{
+    background:						#46B24F;
+    color:							#ffffff;
+}
+
+.Document {
+    text-align: left;
+}
+/* widget */
+.ywidget {position:relative; border: 0px dashed #aaa; border-radius:3px}
+.ywidget .icon-config {height:18px; width:20px; display:none}
+.ywidget .icon-config:hover {background-position:1px -18px;}
+.icon-config {
+    background-image: url("http://techbrood.com/themes/techbrood/css/../image/config.png");
+    background-position: 0px 0px;
+}
+img, video, canvas {
+    max-width: 100%;
+    height: auto;
+}
+hl{background-color:rgba(238, 229, 128, 0.6);padding:3px;border-radius: 3px}
+#nav_sites {
+    font-size: 12px;
+    line-height: 30px;
+    float: left;
+    padding: 0 10px;
+    background: rgba(118, 121, 89, 0.36);
+    border-radius: 3px;
+    margin: 0 10px;
+    height: 30px;
+}
+#nav_sites ul.links{display:flex;}
+#nav_sites ul.links li{line-height: 30px;}
+#nav_sites ul.links a{color:#50a456; padding:0 10px;transition: all 0.5s;}
+#nav_sites ul.links a:hover{color:white;}
+
+ul#HOME_LATEST_ARTICLE_UL{
+    width:100%;
+    overflow:hidden;
+    text-align: left;
+}
+
+ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item{
+    float:left;
+    width:28%;
+    _width:28%;
+    padding:2.5%;
+    overflow:hidden;
+    margin-right:0.5%;
+    background-color:#fff;
+    font-size:1em;
+    color:#333;
+}
+
+ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item:last-child{
+    margin-right:0;
+}
+ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item i{
+    font-size:10px;
+    margin-right:7px;
+}
+ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item:nth-child(2) i.fa-fire{
+    color: #EC58C3;
+}
+ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item:nth-child(3) i.fa-fire{
+    color: orange;
+}
+ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item a{
+    display:block;
+    font-size:1em;
+    font-weight:normal;
+    color:#ffffff;
+    line-height:1.5;
+}
+
+ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item a.category{
+    font-size:0.75em;
+    color:#E6A40B;
+    margin-bottom:1em;
+}
+
+ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item a.title{
+    margin-bottom:0.5em;
+}
+
+ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item div.tag span,
+ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item a.tag{
+    display:inline-block;
+    font-size:0.75em;
+}
+
+ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item a.tag{
+    color:#50a456;
+}
+ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item h3{
+    height: 46px;
+    overflow: hidden;
+    font-size: 16px;
+    color: #454545;
+}
+ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item h5{
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.5;
+    height: 98px;
+    overflow: hidden;
+    margin: 10px 0;
+    color: #666;
+}
+
+ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item div.info{
+    font-size:0.8em;
+}
+
+ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item div.info a.user{
+    float:left;
+    font-size:1em;
+    color:#81B966;
+    background-repeat:no-repeat;
+    background-size:17px 17px;
+    background-position:left center;
+    line-height:17px;
+}
+
+ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item div.info span.publish,
+ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item div.info span.counter{
+    float: right;
+    line-height: 17px;
+    overflow: hidden;
+    margin-left: 1em;
+    font-size: 12px;
+}
+
+ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item div.info span.publish{
+    background-repeat:no-repeat;
+    background-size:17px 17px;
+    background-position:left center;
+}
+
+.searchbox{
+    float: left;
+    position: relative;
+    /*margin-top: 1px;*/
+}
+.searchbox .circle {
+    width: 22px;
+    height: 22px;
+    border: 3px solid rgba(245, 245, 245, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+    /*margin-top: 12px;*/
+}
+.searchbox .circle input {
+    width: 0;
+    transition: all 400ms ease-in-out;
+}
+.searchbox .square input {
+    width: 100%;
+}
+.searchbox input,
+.searchbox input:focus {
+    background: none;
+    margin-left: 20px;
+    padding: 1px 0;
+    width: 260px;
+    border: none;
+    color: rgba(245, 245, 245, 0.7);
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Microsoft Yahei", serif;
+    outline: 0;
+}
+.searchbox .line {
+    width: 12px;
+    height: 4px;
+    background-color: rgba(245, 245, 245, 0.7);
+    transform: rotate(45deg);
+    margin-top: -2px;
+    margin-left: 16px;
+    transition: all 400ms ease-in-out;
+}
+.searchbox .close_btn {
+    width: 18px;
+    top: 15px;
+    margin-left: 12px;
+    position: absolute;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+.searchbox .close_btn:after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 4px;
+    background-color: rgba(245, 245, 245, 0.7);
+    transform: rotate(90deg);
+    margin-left: 0;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+.searchbox .close_btn:hover {
+    transform: rotate(225deg);
+}
+.searchbox .square {
+    margin-left: -260px;
+    border-radius: 3px;
+    width: 300px;
+    height: 30px;
+    border: 3px solid rgba(208, 200, 185, 0.45);
+    transition: all 400ms ease-in-out;
+    /*margin-top: 10px;*/
+    background: #333;
+    z-index: 99;
+}
+#menubar-mobile{
+    display:none;
+}
+.menu-container {
+    width: 100%;
+    opacity: 1;
+    margin-top: 30px;
+}
+@media screen and (max-width: 960px) {
+    div.Document,
+    #NEWS_DETAILS_PAGE_CONTEXT_DIV{
+        width:			98%;
+        margin-left:	auto	!important;
+        margin-right:	auto	!important;
+    }
+    #menubar-mobile {
+        display: block;
+        height: 30px;
+    }
+    .navbar-toggle {
+        border-color: #333333;
+    }
+    .navbar-toggle {
+        float: right;
+        background-color: transparent;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        height: 30px;
+        margin-right: -7px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    .navbar-toggle .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+    .navbar-toggle .icon-bar {
+        background-color: #ffffff;
+    }
+    .navbar-toggle .icon-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 1px;
+    }
+    .navbar-toggle .icon-bar + .icon-bar {
+        margin-top: 4px;
+    }
+    .navbar-toggle .icon-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 1px;
+    }
+    .menu-open .menu-container {
+        width: 100%;
+        opacity: 1;
+    }
+    .menu-container {
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        z-index: 800;
+        overflow: hidden;
+        -webkit-transition: all 0.5s cubic-bezier(0.99, 0.04, 0.87, 1) 0.3s;
+        transition: all 0.5s cubic-bezier(0.99, 0.04, 0.87, 1) 0.3s;
+        background: #81b966;
+        opacity: 0;
+    }
+    .menu-container .cssmenu-mobile {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 1;
+        list-style: none;
+        margin: 0;
+    }
+    .menu-open .menu-container .cssmenu-mobile li:nth-child(1) {
+        opacity: 1;
+        -webkit-transition: 0.2s opacity 0.95s;
+        transition: 0.2s opacity 0.95s;
+    }
+    .menu-container .cssmenu-mobile li:nth-child(1) {
+        opacity: 0;
+        -webkit-transition: 0.2s opacity 0.05s;
+        transition: 0.2s opacity 0.05s;
+    }
+    .menu-container .cssmenu-mobile li {
+        padding: 0;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+    }
+    .menu-container .cssmenu-mobile li a {
+        display: block;
+        color: #fff;
+        font-size: 32px;
+        -webkit-transition: color .3s;
+        transition: color .3s;
+        padding: 16px 0;
+        outline: 0;
+        letter-spacing: 0.2rem;
+    }
+    .menu-container .cssmenu-mobile li a>i{
+        width: 70px;
+    }
+    .userzone, .top-bar{
+        display:	none;
+    }
+    #header div.logo h3{
+        display:						none;
+    }
+
+    #header div.userzone{
+        display:						none;
+    }
+
+    #content{
+        padding:						0 0 10px 0;
+    }
+
+    #footer{
+        text-align:						left;
+        padding:						25px 0 10px 0;
+    }
+
+    #footer ul.pageList{
+        margin:							0 15px 0 15px;
+    }
+
+    #footer #COPYRIGHT{
+        margin:							10px 15px 0 15px;
+        line-height:					1.5;
+        text-align:						left;
+    }
+
+    #footer #COPYRIGHT #COPYRIGHT_LEFT{
+        float:							none;
+        width:							100%;
+        overflow:						hidden;
+    }
+
+    #footer #COPYRIGHT #COPYRIGHT_RIGHT{
+        float:							none;
+        clear:							left;
+        width:							100%;
+        overflow:						hidden;
+    }
+
+    #footer .context_div{
+        width:							95%;
+    }
+    .mobile_invisible{
+        display:						none !important;
+    }
+    .jqmWindow{
+        top:							60px;
+    }
+
+    .dialog_type01{
+        width:							310px;
+        margin-left:					-150px;
+    }
+
+    .dialog_type01 div.dialog_main{
+        width:							300px;
+    }
+
+    .dialog_type01 div.dialog_main_border_div{
+        width:							300px;
+    }
+
+    .dialog_type01 div.dialog_main_content_div{
+        width:							284px	!important;
+        width:							294px;
+        _width:							284px;
+        padding:						5px 5px 45px 5px;
+        margin:							3px;
+    }
+
+    .dialog_type01 div.dialog_main_content_div form ul li{
+        height:							auto;
+        line-height:					30px;
+        margin:							0;
+    }
+
+    .dialog_type01 div.dialog_main_content_div form ul li dl dt,
+    .dialog_type01 div.dialog_main_content_div form ul li dl dd{
+        float:							none;
+    }
+
+    .dialog_type01 div.dialog_main_content_div form ul li dl dt.empty_dt{
+        display:						none;
+    }
+
+    .dialog_type01 div.dialog_main_content_div form ul li dl dt{
+        width:							75px;
+        font-size:						14px;
+        text-align:						left;
+    }
+
+    .dialog_type01 div.dialog_main_content_div form ul li dl dt.center_align{
+        text-align:						left;
+        padding-left:					10px;
+    }
+
+    .dialog_type01 div.dialog_main_content_div form ul li dl dd{
+        width:							268px;
+    }
+
+    .dialog_type01 div.dialog_main_content_div form ul li dl dd.borderbox{
+        width:							266px	!important;
+        width:							268px;
+        _width:							266px;
+        height:							40px	!important;
+        height:							42px;
+        _height:						40px;
+        border:							1px solid #cccccc;
+    }
+
+    .dialog_type01 div.dialog_main_content_div form ul li dl dd.msgbox{
+        width:							60px;
+        margin:							3px 0 0 5px;
+    }
+
+    .dialog_type01 div.dialog_main_content_div form ul li dl dd input[type=text],
+    .dialog_type01 div.dialog_main_content_div form ul li dl dd input[type=password]{
+        width:							236px;
+        height:							38px;
+        line-height:					38px;
+        margin:							1px 15px 1px 15px;
+    }
+
+    .dialog_type01 div.dialog_main{
+        float:							none;
+        z-index:						99;
+    }
+
+    .dialog_type01 a.close_button{
+        float: none;
+        z-index: 999;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 5px;
+        right: 15px;
+        margin-top: 0;
+        background-image: url("http://techbrood.com/themes/techbrood/css/../image/green_cross.png");
+        background-color: transparent;
+        border-radius: 50%;
+    }
+
+    .dialog_type01 label{
+        margin-left:					10px;
+    }
+    ul#HOME_LATEST_ARTICLE_UL li.home_lastest_article_item {
+        float: none;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 640px) {
+    .context_div{
+        width: 100%;
+    }
+}
+

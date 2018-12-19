@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%=title %></title>
+    <link rel="stylesheet" href="/stylesheet/cropper.css">
+    <link rel="stylesheet" href="/stylesheet/editor.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script type="text/javascript" src="/javascript/jquery.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="left">
+        <div class="title">
+            <h1 class="headline">
+                Editor
+            </h1>
+        </div>
+        <div class="spacer">
+            <div class="mask"></div>
+        </div>
+        <div class="box">
+            <img id="image" src="../image/camera.jpg" alt="">
+        </div>
+        <input type="file" value="image" id="img_input" />
+        <div class="title">
+            <h1 class="headline">
+                PreView
+            </h1>
+        </div>
+        <div class="spacer">
+            <div class="mask"></div>
+        </div>
+        <div class="small"></div>
+        <div class="preview_right">
+            <div style="text-align:center; margin:30px 0;">
+                <label>图片描述：</label>
+                <textarea id="picture_remark" rows="5" cols="30"></textarea>
+            </div>
+            <div style="text-align:center; margin:30px 0;">
+                <button id="btn_upload">上传</button>
+            </div>
+        </div>
+    </div>
+    <div class="menu" id="menu">
+        <div>
+            <p class="section">Zoom
+                <i style="float:right; margin-right:20px" class="fa fa-chevron-right fa-2x"></i>
+            </p>
+            <div class="panel" style="display:none">
+                <div class="panelContent">
+                    <div class="panelItem">
+                        <div class="panelZoom">
+                            <i id="enlarge" class="fa fa-plus-square-o fa-2x"></i>
+                            <i id="narrow" class="fa fa-minus-square-o fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p class="section">Move
+                <i style="float:right; margin-right:20px" class="fa fa-chevron-right fa-2x"></i>
+            </p>
+            <div class="panel" style="display:none">
+                <div class="panelContent">
+                        <div class="panelItem">
+                            <div class="direction">
+                                <i id="move-up" class="fa fa-chevron-circle-up fa-2x"></i>
+                                <i id="move-down" class="fa fa-chevron-circle-down fa-2x"></i>
+                                <i id="move-left" class="fa fa-chevron-circle-left fa-2x"></i>
+                                <i id="move-right" class="fa fa-chevron-circle-right fa-2x"></i>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p class="section">Cutting
+                <i style="float:right; margin-right:20px" class="fa fa-chevron-right fa-2x"></i>
+            </p>
+            <div class="panel" style="display:none">
+                <div class="panelContent">
+                    <div class="panelItem">
+                        <label class="inputLabel">Cutting Size:</label><br>
+                    </div>
+                    <div class="panelItem">
+                        <input class="item_input" id="crop-width" min="0"><i class="fa fa-close fa-1x"></i><input class="item_input" id="crop-height" min="0"><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p class="section">Rotate
+                <i style="float:right; margin-right:20px" class="fa fa-chevron-right fa-2x"></i>
+            </p>
+            <div class="panel" style="display:none">
+                <div class="panelContent">
+                    <form method="post">
+                        <div class="panelItem">
+                            <label class="inputLabel">Rotate:</label><br>
+                        </div>
+                        <div class="panelItem">
+                            <input type="range" name="rotate" min="-180" max="180">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p class="section">Reverse
+                <i style="float:right; margin-right:20px" class="fa fa-chevron-right fa-2x"></i>
+            </p>
+            <div class="panel" style="display:none">
+                <div class="panelContent">
+                    <div class="panelItem">
+                        <div class="panelZoom">
+                            <i id="reverse-x" class="fa fa-arrows-h fa-2x"></i>
+                            <i id="reverse-y" class="fa fa-arrows-v fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p class="section">Color
+                <i style="float:right; margin-right:20px" class="fa fa-chevron-right fa-2x"></i>
+            </p>
+            <div class="panel" style="display:none">
+                <div class="panelContent">
+                    <div class="panelItem">
+                        <label class="inputLabel">Brightness:</label><br>
+                    </div>
+                    <div class="panelItem">
+                        <input type="range" name="brightness" min="0" max="10">
+                    </div>
+                    <div class="panelItem">
+                        <label class="inputLabel">Contrast:</label><br>
+                    </div>
+                    <div class="panelItem">
+                        <input type="range" name="contrast" min="0" max="10">
+                    </div>
+                    <div class="panelItem">
+                        <label class="inputLabel">Saturation:</label><br>
+                    </div>
+                    <div class="panelItem">
+                        <input type="range" name="saturation" min="0" max="10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>>
+</body>
+<script type="text/javascript" src="/javascript/cropper.js"></script>
+<script>
+    var start_Edit=false;
+    var degree=0;
+    var brightVal=1;
+    var contrastVal=1;
+    var saturateVal=1;
+    var reversedX=false;
+    var reversedY=false;
+</script>
+<script type="text/javascript" src="/javascript/editor.js"></script>
+</html>

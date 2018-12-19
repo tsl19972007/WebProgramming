@@ -1,0 +1,118 @@
+#picture_remark{
+    border:3px solid black;
+    border-radius: 10px;
+}
+
+.panel-rightTop{
+    border:3px solid black;
+    background-color: white;
+    width: 700px;
+    height: 300px;
+    border-radius: 10px;
+    padding:1px;
+    transition: box-shadow .30s;
+    float: left;
+}
+.panel-rightTop:hover{
+    box-shadow: #fff 5px 5px 25px;
+}
+
+body {
+    background-image: url(../image/background.jpg);
+    background-repeat:no-repeat;
+    background-position: center 0;
+    background-attachment:fixed;
+    background-size: 100% 100%;
+}
+
+div.left{
+    margin-left:3%;
+    float: left;
+}
+
+div.container{
+    width:100%;
+    float:left;
+}
+
+div.desc {
+    text-align:center;
+    font-weight:normal;
+    width:100%;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size:1em;
+    margin:0;
+}
+
+/*分割线样式*/
+.spacer {
+    margin:3% 0;
+    width: 100%;
+    position: relative;
+}
+.spacer .mask {
+    overflow: hidden;
+    height: 20px;
+}
+.spacer .mask:after {
+    content: '';
+    display: block;
+    margin: -25px auto 0;
+    width: 100%;
+    height: 25px;
+    border-radius: 125px/12px;
+    box-shadow: 0 0 20px black;
+}
+
+body{
+    font: 14px/28px "微软雅黑";
+}
+
+
+/*导入图片设置*/
+.float1{
+    float:left;
+    width : 60px;
+    height: 60px;
+    overflow: hidden;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+}
+
+img{
+    position: relative;
+}
+.result{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+#file_input1{
+    display: none;
+}
+
+.delete{
+    width: 50px;
+    height:50px;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    z-index: 10;
+    font-size: 15px;
+    background-color: rgba(255,255,255,0.8);
+    color: #777;
+    opacity: 0;
+    transition-duration:0.7s;
+    -webkit-transition-duration: 0.7s;
+}
+
+
+.delete:hover{
+    cursor: pointer;
+    opacity: 1;
+}
